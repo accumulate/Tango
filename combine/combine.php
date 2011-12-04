@@ -20,9 +20,9 @@ if (!$folder) {
 $dest_folder = $folder . '_combine';
 
 if (is_dir($folder)) {
-	delete_dir($dest_folder);				// 先删除“目标目录”
-	xCopy($folder, $dest_folder);			// 将“源目录”中的文件拷贝至“目标目录”
-	$fileList = find_files($dest_folder);	// 获取文件列表
+	delete_dir($dest_folder);                // 先删除“目标目录”2
+	xCopy($folder, $dest_folder);            // 将“源目录”中的文件拷贝至“目标目录”
+	$fileList = find_files($dest_folder);    // 获取文件列表
 	foreach($fileList as $file) {
 		$fileinfo = pathinfo($file);
 		// 合并文件
